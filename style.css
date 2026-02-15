@@ -1,0 +1,599 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.hero {
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("imagas/https://explore-botswana.com/wp-content/uploads/2024/07/Self-Drive-Safari-4x4-Car-Hire-Route-Highlights-Botswana-Victoria-Falls-pic2.webp");
+    
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+header.sticky {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  color: white;
+}
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+#nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+#nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  #nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+}
+
+.hero {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1.2s ease;
+}
+
+.hero.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn {
+  padding: 12px 24px;
+  background: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #e68900;
+  transform: scale(1.05);
+}
+
+/* PAGE HERO */
+.page-hero {
+  height: 40vh;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+/* CARDS */
+
+.card {
+  background: #f4f4f4;
+  padding: 30px;
+  width: 250px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* CONTENT */
+.content {
+  padding: 60px 15%;
+  line-height: 1.7;
+}
+
+/* CONTACT FORM */
+.contact-section {
+  padding: 60px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-section button {
+  padding: 12px;
+  background: #ff9800;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.cards {
+  padding: 80px 10%;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.featured-card {
+  height: 350px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.featured-card {
+  background-size: 110%;
+  transition: all 0.5s ease;
+}
+
+.featured-card:hover {
+  background-size: 120%;
+  transform: translateY(-10px);
+}
+
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+@media (max-width: 480px) {
+  .cards {
+    padding: 60px 5%;
+  }
+}
+
+
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.main-footer {
+  background: #111;
+  color: #fff;
+  padding: 60px 10% 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 20px;
+}
+
+.footer-section a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #ff9800;
+  padding-left: 5px;
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  flex: 1;
+}
+
+.newsletter button {
+  padding: 8px 15px;
+  background: #ff9800;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+}
+
+.destinations-page {
+  background-color: #f9f9f9; /* soft light gray */
+  min-height: 100vh;
+  padding-top: 80px; /* leave space for fixed header */
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* ================================= */
+/* NEW MOROCCO EDITORIAL DESIGN */
+/* ================================= */
+
+body {
+  font-family: 'Georgia', serif;
+  background: #fdfaf5;
+  color: #2e2e2e;
+}
+
+/* HERO */
+.page-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReavvRJxNiUMozTBHT4-XrH3b-vuIwJHOjENV07c63437UPJIflgjs0acD&s=10');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.page-hero h1 {
+  color: white;
+  font-size: 48px;
+  letter-spacing: 2px;
+}
+
+/* INTRO SECTION */
+.morocco-intro {
+  padding: 80px 12%;
+  background: #fff;
+  text-align: center;
+}
+
+.morocco-intro h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #8c5a2b;
+}
+
+.morocco-intro ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* TWO COLUMN CONTENT */
+.morocco-content {
+  padding: 100px 12%;
+  column-count: 2;
+  column-gap: 60px;
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+.morocco-content h2 {
+  column-span: all;
+  margin-top: 60px;
+  font-size: 28px;
+  color: #8c5a2b;
+}
+
+/* Highlight Quote */
+.morocco-content b {
+  display: block;
+  background: #8c5a2b;
+  color: white;
+  padding: 20px;
+  margin: 30px 0;
+  font-size: 18px;
+  column-span: all;
+}
+
+/* Images */
+.morocco-content img {
+  width: 100%;
+  margin: 40px 0;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  column-span: all;
+}
+
+/* Sahara Section Contrast */
+.morocco-content h2:nth-of-type(2) {
+  color: #b36b00;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .morocco-content {
+    column-count: 1;
+  }
+
+  .page-hero h1 {
+    font-size: 32px;
+  }
+}
+
+.social-share {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #2c3e50;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #e67e22;
+}
+
+.social-icons {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.icons a {
+  font-size: 28px;
+  margin: 0 15px;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Brand Colors on Hover */
+.icons a:nth-child(1):hover { color: #1877f2; }  /* Facebook */
+.icons a:nth-child(2):hover { color: #25D366; }  /* WhatsApp */
+.icons a:nth-child(3):hover { color: #E1306C; }  /* Instagram */
+.icons a:nth-child(4):hover { color: #000000; }  /* X */
+.icons a:nth-child(5):hover { color: #FF0000; }  /* YouTube */
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #2c3e50;
+  color: white;
+}
+
+.logo {
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* MOBILE STYLE */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #34495e;
+    width: 200px;
+    flex-direction: column;
+    display: none;
+    padding: 20px;
+  }
+
+  .nav-links li {
+    margin-bottom: 15px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+a img {
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+a img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ---------------------------- */
+/* INTRO SECTION STYLING */
+/* ---------------------------- */
+.intro-section {
+  padding: 120px 10% 60px; /* add top padding for fixed navbar */
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+/* TWO-COLUMN LAYOUT FOR SECTIONS */
+.intro-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+  align-items: start;
+}
+
+.two-column img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+}
+
+/* HEADINGS AND DIVIDERS */
+h2 {
+  margin-top: 50px;
+  font-size: 28px;
+  border-left: 6px solid #ff9800;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+/* CARD-LIKE SECTIONS */
+.card {
+  background: #faf7f2;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #e0dcd6;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .intro-section {
+    padding: 140px 5% 40px;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
