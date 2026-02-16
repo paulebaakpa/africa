@@ -1,3 +1,4 @@
+Css
 html {
   scroll-behavior: smooth;
 }
@@ -23,7 +24,7 @@ html {
   color: white;
 }
 
-header {
+header.navbar-header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -420,37 +421,73 @@ body {
   }
 }
 
-.social-share {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.social-links a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #2c3e50;
-  transition: 0.3s;
-}
-
-.social-links a:hover {
-  color: #e67e22;
-}
+/* ===============================
+   SOCIAL CONNECT SECTION
+================================ */
 
 .social-icons {
-  text-align: center;
+  margin: 80px auto;              /* space from other sections */
   padding: 40px 20px;
+  max-width: 1100px;
+
+  border: 2px solid #e5e5e5;      /* subtle border */
+  border-radius: 16px;
+  background: #fafafa;
+
+  text-align: center;
 }
 
-.icons a {
-  font-size: 28px;
-  margin: 0 15px;
+/* Section heading */
+.social-icons h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* Icon container */
+.social-icons .icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Icon links */
+.social-icons .icons a {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+
   color: #333;
-  transition: 0.3s ease;
+  font-size: 1.4rem;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
 }
 
-.icons a:hover {
-  transform: scale(1.2);
+/* Hover effect */
+.social-icons .icons a:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+  .social-icons {
+    margin: 60px 15px;
+    padding: 30px 15px;
+  }
+}
+
 
 /* Brand Colors on Hover */
 .icons a:nth-child(1):hover { color: #1877f2; }  /* Facebook */
@@ -526,11 +563,13 @@ a img:hover {
   opacity: 0.9;
 }
 
-/* ---------------------------- */
-/* INTRO SECTION STYLING */
-/* ---------------------------- */
+
+/* ===================================== */
+/* INTRO SECTION */
+/* ===================================== */
+
 .intro-section {
-  padding: 120px 10% 60px; /* add top padding for fixed navbar */
+  padding: 120px 10% 60px;
   max-width: 1000px;
   margin: auto;
   background: #fff;
@@ -539,13 +578,16 @@ a img:hover {
   box-shadow: 0 15px 30px rgba(0,0,0,0.05);
 }
 
-/* TWO-COLUMN LAYOUT FOR SECTIONS */
 .intro-section p {
   font-size: 16px;
   line-height: 1.7;
   color: #444;
   margin-bottom: 20px;
 }
+
+/* ===================================== */
+/* TWO COLUMN LAYOUT */
+/* ===================================== */
 
 .two-column {
   display: grid;
@@ -561,6 +603,8 @@ a img:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   border: 1px solid #ccc;
 }
+
+
 
 /* HEADINGS AND DIVIDERS */
 h2 {
@@ -596,4 +640,166 @@ h2 {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+}
+
+
+/* ===================================== */
+/* MOROCCO ITINERARIES PAGE */
+/* ===================================== */
+
+.itineraries-header {
+  padding: 160px 10% 80px;   /* top padding accounts for fixed navbar */
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url('https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.itineraries-header h1 {
+  font-size: 48px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.itineraries-header p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.itineraries-header a {
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #ff9800;
+  transition: 0.3s ease;
+}
+
+.itineraries-header a:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Content Section Below Header */
+
+.itineraries-content {
+  padding: 80px 10%;
+  max-width: 1000px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+  margin-top: -60px; /* pulls content slightly into hero for modern effect */
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .itineraries-header {
+    padding: 140px 5% 60px;
+  }
+
+  .itineraries-header h1 {
+    font-size: 32px;
+  }
+
+  .itineraries-content {
+    padding: 50px 5%;
+  }
+}
+
+/* ===================================== */
+/* ITINERARY SECTION DESIGN */
+/* ===================================== */
+
+.itinerary-section {
+  margin-top: 80px;
+  background: #fff;
+}
+
+/* Title */
+.itinerary-section h2 {
+  font-size: 30px;
+  text-align: center;
+  border-left: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+  color: #8c5a2b;
+}
+
+/* Bullet List */
+.itinerary-section ul {
+  background: #faf7f2;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e0dcd6;
+  margin: 30px 0;
+  list-style: none;
+}
+
+.itinerary-section ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e6e2dc;
+}
+
+.itinerary-section ul li:last-child {
+  border-bottom: none;
+}
+
+/* Day Paragraph Blocks */
+.itinerary-section p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* Highlight "Day 1, Day 2" */
+.itinerary-section p b {
+  color: #b36b00;
+  font-size: 18px;
+}
+
+/* Image Styling */
+.itinerary-section img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+
+.itinerary-section img:hover {
+  transform: scale(1.02);
+}
+
+
+/* ===== NAVIGATION ===== */
+.nav-links {
+  position:inherit;
+  top: 0;
+  background: white;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 15px;
+  border-bottom: 2px solid #ddd;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1e3d59;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #1e3d59;
+  color: white;
 }
