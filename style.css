@@ -5,6 +5,951 @@ html {
 
 
 
+/* ===== NAVBAR ===== */
+header {
+  background: #1e3d59;   /* Dark blue */
+  padding: 15px 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  color: white;
+  font-size: 22px;
+}
+
+/* ===== NAV LINKS ===== */
+#nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+#nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+#nav-links li a:hover {
+  color: #ffcc00;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== MOBILE STYLE ===== */
+@media (max-width: 768px) {
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1e3d59;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+.hero {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1.2s ease;
+}
+
+.hero.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn {
+  padding: 12px 24px;
+  background: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #e68900;
+  transform: scale(1.05);
+}
+
+/* PAGE HERO */
+.page-hero {
+  height: 40vh;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+/* CARDS */
+
+
+
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* CONTENT */
+.content {
+  padding: 60px 15%;
+  line-height: 1.7;
+}
+
+/* CONTACT FORM */
+.contact-section {
+  padding: 60px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-section button {
+  padding: 12px;
+  background: #ff9800;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.cards {
+  padding: 80px 10%;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.featured-card {
+  height: 350px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.featured-card {
+  background-size: 110%;
+  transition: all 0.5s ease;
+}
+
+.featured-card:hover {
+  background-size: 120%;
+  transform: translateY(-10px);
+}
+
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+@media (max-width: 480px) {
+  .cards {
+    padding: 60px 5%;
+  }
+}
+
+
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.main-footer {
+  background: #111;
+  color: #fff;
+  padding: 60px 10% 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 20px;
+}
+
+.footer-section a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #ff9800;
+  padding-left: 5px;
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  flex: 1;
+}
+
+.newsletter button {
+  padding: 8px 15px;
+  background: #ff9800;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+}
+
+.destinations-page {
+  background-color: #f9f9f9; /* soft light gray */
+  min-height: 100vh;
+  padding-top: 80px; /* leave space for fixed header */
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* ================================= */
+/* NEW MOROCCO EDITORIAL DESIGN */
+/* ================================= */
+
+body {
+  font-family: 'Georgia', serif;
+  background: #fdfaf5;
+  color: #2e2e2e;
+}
+
+/* HERO */
+.page-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReavvRJxNiUMozTBHT4-XrH3b-vuIwJHOjENV07c63437UPJIflgjs0acD&s=10');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.page-hero h1 {
+  color: white;
+  font-size: 48px;
+  letter-spacing: 2px;
+}
+
+/* INTRO SECTION */
+.morocco-intro {
+  padding: 80px 12%;
+  background: #fff;
+  text-align: center;
+}
+
+.morocco-intro h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #8c5a2b;
+}
+
+.morocco-intro ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* TWO COLUMN CONTENT */
+.morocco-content {
+  padding: 100px 12%;
+  column-count: 2;
+  column-gap: 60px;
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+.morocco-content h2 {
+  column-span: all;
+  margin-top: 60px;
+  font-size: 28px;
+  color: #8c5a2b;
+}
+
+/* Highlight Quote */
+.morocco-content b {
+  display: block;
+  background: #8c5a2b;
+  color: white;
+  padding: 20px;
+  margin: 30px 0;
+  font-size: 18px;
+  column-span: all;
+}
+
+/* Images */
+.morocco-content img {
+  width: 100%;
+  margin: 40px 0;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  column-span: all;
+}
+
+/* Sahara Section Contrast */
+.morocco-content h2:nth-of-type(2) {
+  color: #b36b00;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .morocco-content {
+    column-count: 1;
+  }
+
+  .page-hero h1 {
+    font-size: 32px;
+  }
+}
+
+/* ===============================
+   SOCIAL CONNECT SECTION
+================================ */
+
+.social-icons {
+  margin: 80px auto;              /* space from other sections */
+  padding: 40px 20px;
+  max-width: 1100px;
+
+  border: 2px solid #e5e5e5;      /* subtle border */
+  border-radius: 16px;
+  background: #fafafa;
+
+  text-align: center;
+}
+
+/* Section heading */
+.social-icons h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* Icon container */
+.social-icons .icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Icon links */
+.social-icons .icons a {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+
+  color: #333;
+  font-size: 1.4rem;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.social-icons .icons a:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+  .social-icons {
+    margin: 60px 15px;
+    padding: 30px 15px;
+  }
+}
+
+
+/* Brand Colors on Hover */
+.icons a:nth-child(1):hover { color: #1877f2; }  /* Facebook */
+.icons a:nth-child(2):hover { color: #25D366; }  /* WhatsApp */
+.icons a:nth-child(3):hover { color: #E1306C; }  /* Instagram */
+.icons a:nth-child(4):hover { color: #000000; }  /* X */
+.icons a:nth-child(5):hover { color: #FF0000; }  /* YouTube */
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #2c3e50;
+  color: white;
+}
+
+.logo {
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* MOBILE STYLE */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #34495e;
+    width: 200px;
+    flex-direction: column;
+    display: none;
+    padding: 20px;
+  }
+
+  .nav-links li {
+    margin-bottom: 15px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+a img {
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+a img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+
+/* ===================================== */
+/* INTRO SECTION */
+/* ===================================== */
+
+.intro-section {
+  padding: 120px 10% 60px;
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.intro-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* ===================================== */
+/* TWO COLUMN LAYOUT */
+/* ===================================== */
+
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+  align-items: start;
+}
+
+.two-column img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+}
+
+
+
+/* HEADINGS AND DIVIDERS */
+h2 {
+  margin-top: 50px;
+  font-size: 28px;
+  border-left: 6px solid #ff9800;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+/* CARD-LIKE SECTIONS */
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .intro-section {
+    padding: 140px 5% 40px;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+
+/* ===================================== */
+/* MOROCCO ITINERARIES PAGE */
+/* ===================================== */
+
+.itineraries-header {
+  padding: 160px 10% 80px;   /* top padding accounts for fixed navbar */
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url('https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.itineraries-header h1 {
+  font-size: 48px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.itineraries-header p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.itineraries-header a {
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #ff9800;
+  transition: 0.3s ease;
+}
+
+.itineraries-header a:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Content Section Below Header */
+
+.itineraries-content {
+  padding: 80px 10%;
+  max-width: 1000px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+  margin-top: -60px; /* pulls content slightly into hero for modern effect */
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .itineraries-header {
+    padding: 140px 5% 60px;
+  }
+
+  .itineraries-header h1 {
+    font-size: 32px;
+  }
+
+  .itineraries-content {
+    padding: 50px 5%;
+  }
+}
+
+/* ===================================== */
+/* ITINERARY SECTION DESIGN */
+/* ===================================== */
+
+.itinerary-section {
+  margin-top: 80px;
+  background: #fff;
+}
+
+/* Title */
+.itinerary-section h2 {
+  font-size: 30px;
+  text-align: center;
+  border-left: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+  color: #8c5a2b;
+}
+
+/* Bullet List */
+.itinerary-section ul {
+  background: #faf7f2;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e0dcd6;
+  margin: 30px 0;
+  list-style: none;
+}
+
+.itinerary-section ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e6e2dc;
+}
+
+.itinerary-section ul li:last-child {
+  border-bottom: none;
+}
+
+/* Day Paragraph Blocks */
+.itinerary-section p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* Highlight "Day 1, Day 2" */
+.itinerary-section p b {
+  color: #b36b00;
+  font-size: 18px;
+}
+
+/* Image Styling */
+.itinerary-section img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+
+.itinerary-section img:hover {
+  transform: scale(1.02);
+}
+
+
+/* ===== NAVIGATION ===== */
+.itinerary-links {
+  position:inherit;
+  top: 0;
+  background: white;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 15px;
+  border-bottom: 2px solid #ddd;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+
+.itinerary-links a {
+  text-decoration: none;
+  color: #1e3d59;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.itinerary-links a:hover {
+  background-color: #1e3d59;
+  color: white;
+}
+
+
+/* ===== HEADER SECTION ===== */
+.itineraries-header {
+  background: #1e3d59;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.itineraries-header h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.itineraries-header p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ===== CONTENT SECTION ===== */
+.itinerary-content {
+  padding: 40px 20px;
+}
+
+.itinerary-content h2 {
+  margin: 30px 0 15px;
+  color: #1e3d59;
+}
+
+.itinerary-content p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ===== ITINERARY NAV ===== */
+.itinerary-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: #1e3d59;
+}
+
+.itinerary-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.15);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.itinerary-nav a:hover {
+  background: #ffcc00;
+  color: #1e3d59;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  .itineraries-header h1 {
+    font-size: 26px;
+  }
+
+  .itineraries-header p {
+    font-size: 16px;
+  }
+
+  .itinerary-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .itinerary-nav a {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+
+/* ===== ITINERARY SECTION ===== */
+.itinerary-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card container */
+.itinerary-card {
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #e5e5e5;
+}
+
+/* Title */
+.itinerary-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e3d59;
+  font-size: 28px;
+}
+
+/* Intro text */
+.itinerary-card .intro {
+  text-align: center;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Day list */
+.day-list ul {
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.day-list li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Individual day blocks */
+.day {
+  margin-bottom: 25px;
+  padding: 20px;
+  border-left: 4px solid #1e3d59;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.day h3 {
+  margin-bottom: 10px;
+  color: #1e3d59;
+}
+
+.day p {
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  .itinerary-card {
+    padding: 25px;
+  }
+
+  .itinerary-card h2 {
+    font-size: 22px;
+  }
+
+  .day {
+    padding: 15px;
+  }
+
+}
+
+Css
+html {
+  scroll-behavior: smooth;
+}
+
+
+
 .hero {
   height: 100vh;
   background: 
@@ -979,3 +1924,84 @@ h2 {
 
 }
 
+/* GENERAL CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 0;
+}
+
+/* SECTION HEADINGS */
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+section p {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
+
+/* IMAGES */
+figure img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* EXPERIENCE GRID */
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* CARD STYLE */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* LARGE SCREEN */
+@media (min-width: 1024px) {
+  .experience-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
