@@ -3,26 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Morocco Itineraries</title>
+  <title>Morocco Itineraries | Explore Africa</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<section id="top" class="itineraries-header">
+<!-- ================= HEADER / NAV ================= -->
+<header>
+  <nav>
+    <h2 class="logo">Explore Africa</h2>
 
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="morocco-itineraries.html">Itineraries</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- ================= HERO SECTION ================= -->
+<section class="itineraries-header">
   <h1>Morocco Itineraries</h1>
   <p>
-    Planning a trip to Morocco can be overwhelming due to the wide range of options available. To make it easier for you, we have curated several sample <b>Morocco itineraries</b> for your consideration. 
-  </p><br>
-  </section>
-  <p>These itineraries serve as suggestions and be customized according to your specific preferences. Whether you want to extend or shorten your trip, visit different places, or include specific activities, we are here to accommodate your needs. Simply <a href="contact.html"> contact us,</a> and we will tailor your <b>Morocco itinerary to make you dream trip a reality.</b></p>
-  <h2>PLAN MY TRIP</h2>
-  <h2>RECOMMENDED MOROCCO ITINERARIES</h2>
-  <p>Discover the best Morocco itineraries whether you are planing a short 4-day trip or a leisurely two-week adventure (or perhaps even more). Our Morocco itineraries are designed with help you explore Morocco's famous Medinas, relax on beautiful beaches, and experience the magical Sahaha desert while immersing yourself in the country's warm hospitality.</p><br>
-  <p>The allure of the Sahara desert is undeniable, making it a must-visit destination during your Morocco vacation. Our Mororcco travel itineraries ensure you experience this iconic attraction along with other captivating places on your journey. There is a lot more to discover beyound the desert Morocco!</p><br>
-  <p>Explore our range of Morocco travel itinerary suggestions below. These Morocco itineraries serve as a starting point and can be fully customized to meet your travel preferences and desires. Whetheer you prefer different accommodations, unique experiences, oer an alternatives route, we are here to assit you. <a href="contact.html"> Contact us </a> today to receive a personalized quote based on your specific requirements. Simply provide your details, and let us create the perfect Mororcco itinerary for you!</p>
-
-  <!-- NAVIGATION -->
+    Discover Morocco through carefully designed travel experiences that blend
+    imperial cities, Sahara Desert adventures, mountain landscapes,
+    historic kasbahs, and vibrant culture.
+    Whether you have 4 days or 5 days, we have the perfect route for you.
+  </p>
+</section>
+ <!-- NAVIGATION -->
 <nav class="itinerary-nav">
   <a href="#top">Top</a>
   <a href="#days-4">4 Days</a>
@@ -36,45 +52,181 @@
   <a href="#two-weeks">2 Weeks</a>
   <a href="#map">Map</a>
 </nav>
-<section id="days-4"class="itinerary-section itineraries-content">
-  <h2>MOROCCO ITINERARIES 4 DAYS HIGHLIGHTS</h2>
-  <P>
-    This Morocco itinerary shares how to have the best time in Morocco if you have only 4 days. This is a short but unforgettable itinerary. Below is a breakdown of the 4-day Morocco itinerary.
-  </P><br>
-  <ul>
-    <li>Day 1: Casablanca -> Rabat -> Fes</li>
-    <li>Day 2: Fes -> Ifrane -> Middle Atlas Mountains -> Ziz Valley -> Merzouga desert</li>
-    <li>Day 3: Merzouga desert -> Rissani -> Todra Gorge -> Dades Valley</li>
-    <li>Day 4: Dades Valley -> Oiarzazate -> Ait Ben Haddou Kasbah -> High Atlas Mountains -> Marrakech</li>
-  </ul>
-  <p><b>Day 1:</b> Start you Morocco itinerary in Casablanca with a visit to the impressive Hassan II Mosque, than travel to Rabat to explore historical sites before heading to Fes for a delightful evening in the Medina.</p><br>
-  <p><b>Day 2:</b> Journey from Fes to the mesmerizing Merzouga desert via ifrane and the Middle Atlas Mountains, experiencing breathtaking landscapes and rare wildlife along the way. Enjoy a desert camp experience under the starry skies.</p><br>
-  <p><b>Day 3:</b> Witness the sunrise in the Sahaha, the venture to Rissani for a traditional souk visit and explore the Todra Canyon and Dades Gorges, marveling at nature's wonders.</p><br>
-  <p><b>Day 4:</b>Conclude your tour with a scenic drive to Marrakech, passing through Ouarzate and the iconic Ait Ben Haddou Kasbah. Traverse the High Atlas Mountains and arrive in Marrakech, ending your unforgettable journey. </p>
-  <img src="https://media.cntraveler.com/photos/65dfc055e781ac22c9a500e9/master/pass/GettyImages-1450546518.jpg" alt="island">
+
+
+<!-- ================= 4 DAY ITINERARY ================= -->
+<section id="days-4" class="itinerary-section">
+
+  <div class="itinerary-card">
+
+    <h2>4 Days Morocco Desert Tour – Casablanca to Marrakech</h2>
+
+    <p class="intro">
+      This 4-day Morocco itinerary is designed for travelers who want to
+      experience the highlights of Morocco in a short time.
+      From imperial cities to the Sahara Desert and the Atlas Mountains,
+      this journey combines culture, history, and breathtaking landscapes.
+    </p>
+
+    <!-- Trip Overview -->
+    <div class="day-list">
+      <ul>
+        <li><strong>Day 1:</strong> Casablanca → Rabat → Fes</li>
+        <li><strong>Day 2:</strong> Fes → Ifrane → Middle Atlas → Ziz Valley → Merzouga</li>
+        <li><strong>Day 3:</strong> Merzouga → Rissani → Todra Gorge → Dades Valley</li>
+        <li><strong>Day 4:</strong> Dades Valley → Ouarzazate → Ait Ben Haddou → Marrakech</li>
+      </ul>
+    </div>
+
+    <!-- Day Details -->
+    <div class="day">
+      <h3>Day 1 – Casablanca to Fes</h3>
+      <p>
+        Your journey begins in Casablanca where you will visit the impressive
+        Hassan II Mosque overlooking the Atlantic Ocean.
+        Continue to Rabat, Morocco’s capital, to explore the Hassan Tower,
+        the Mausoleum of Mohammed V, and the Kasbah of the Udayas.
+        In the afternoon, travel to Fes, one of Morocco’s oldest imperial cities,
+        where you will spend the night.
+      </p>
+    </div>
+
+    <div class="day">
+      <h3>Day 2 – Fes to Merzouga Desert</h3>
+      <p>
+        After breakfast, depart Fes and drive through Ifrane, often called
+        the “Switzerland of Morocco” because of its alpine-style architecture.
+        Continue through the cedar forests of the Middle Atlas Mountains,
+        where you may encounter Barbary monkeys.
+        Pass through the scenic Ziz Valley before arriving in Merzouga.
+        In the evening, enjoy a camel trek into the Sahara Desert and spend the
+        night in a traditional desert camp under the stars.
+      </p>
+    </div>
+
+    <div class="day">
+      <h3>Day 3 – Sahara to Dades Valley</h3>
+      <p>
+        Wake up early to witness a spectacular sunrise over the golden dunes.
+        After breakfast, depart the desert and visit Rissani,
+        known for its traditional market.
+        Continue to the dramatic Todra Gorge, famous for its towering canyon walls.
+        Later, travel through the Valley of Roses before arriving at Dades Valley
+        for an overnight stay surrounded by stunning rock formations.
+      </p>
+    </div>
+
+    <div class="day">
+      <h3>Day 4 – Dades Valley to Marrakech</h3>
+      <p>
+        On the final day, drive along the Road of a Thousand Kasbahs.
+        Visit Ouarzazate, often called the “Hollywood of Africa,”
+        then explore the UNESCO-listed Ait Ben Haddou Kasbah.
+        Cross the High Atlas Mountains via the Tizi n'Tichka Pass
+        before arriving in Marrakech in the evening.
+      </p>
+    </div>
+
+    <img src="https://media.cntraveler.com/photos/65dfc055e781ac22c9a500e9/master/pass/GettyImages-1450546518.jpg"
+         alt="Sahara Desert Morocco">
+
+  </div>
 
 </section>
+
+
+<!-- ================= 5 DAY ITINERARY ================= -->
 <section id="days-5" class="itinerary-section">
-  <h2>MOROCCO ITINERARY 5 DAYS HIGHLIGHTS</h2><br>
-  <p>The best Morocco itinerary for those with limited time. Planning a short trip to Morocco and aiming to explore everything? Here is how to spend 5 days in Morocco while visiting Chefchaouen, Fes, and enjoying a dersert tour. Below is a breakdown of the 5-day Mororcco itinerary.</p><br>
-  <ul>
-    <li>Day 1: Casablanca -> Chefchaouen</li>
-    <li>Day 2: Chefchaouen -> Fes</li>
-    <li>Day 3: Fes -> Ifrane -> Middle Atlas Mountains -> Ziz Valley -> Merzouga desert</li>
-    <li>Day 4: Merzouga desert -> Rissani -> Todra Gorge -> Dades Valley</li>
-    <li>Day 5: Dades Valley -> Oiarzazate -> Ait Ben Haddou Kasbah -> High Atlas Mountains -> Marrakech</li>
-  </ul>
-  <p><b>Day 1:</b> Your adventure kicks off with a warm reception in Casablanca, followed by an echanting drive to Chefchaouen. Immerse yourself in this blue-washed gem, exploring its winding streets and vibrant markets. Relax in a charming riad, soaking in the city's unique ambiance.</p><br>
-  <p><b>Day 2:</b> After a delightful breakfast, we journey to Fes. Explore the ancient medina with a knowledgeable guide, savoring local flavors and marveling at historical wonders. Rest in a serene riad, embracing the tranquility of Fes.</p><br>
-  <p><b>Day 3:</b> Depart Fes for an unforgettable desert escapade. En route to Merzouga, discover ifrane's beauty and encounter Barbary apes in a cedar forest. Traverse the Ziz Valley's oasis and venture into the mesmerizing Sahaha. A camel trek awaits, leading to a luxury camp for a magical night under the stars.</p><br>
-  <p><b>Day 4:</b> Watch a stunning sunrise before embarking on a scenic journey to Dades Gorge. Visit Rissani's bustling market and marvel at Todra Gorge's majestic cliffs. Traverse Dades Valley's picturesque landscapes before retiring in a comfortable hotel.</p><br>
-  <p><b>Day 5:</b> Conclude your journey with visit to Ouarzazate's film studios and the iconic Ait Ben Haddou Kasbah. Journey through the High Atlas Mountains, soaking in panoramic vistas, before arriving in Marrakech, making the end of an unforgettable 5-day Moroccan odyssey.</p>
+
+  <div class="itinerary-card">
+
+    <h2>5 Days Morocco Adventure – Imperial Cities & Sahara</h2>
+
+    <p class="intro">
+      This 5-day itinerary allows you to explore Morocco at a more relaxed pace.
+      Discover historic medinas, mountain landscapes, and spend unforgettable
+      nights in the Sahara Desert.
+    </p>
+
+    <div class="day-list">
+      <ul>
+        <li><strong>Day 1:</strong> Casablanca → Rabat → Fes</li>
+        <li><strong>Day 2:</strong> Guided Tour of Fes</li>
+        <li><strong>Day 3:</strong> Fes → Ifrane → Merzouga</li>
+        <li><strong>Day 4:</strong> Merzouga → Todra Gorge → Dades</li>
+        <li><strong>Day 5:</strong> Dades → Ait Ben Haddou → Marrakech</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <h3>Day 1 – Arrival & Transfer to Fes</h3>
+      <p>
+        Begin in Casablanca with a visit to the Hassan II Mosque.
+        Continue to Rabat for sightseeing before heading to Fes for the night.
+      </p>
+    </div>
+
+    <div class="day">
+      <h3>Day 2 – Full Day Exploring Fes</h3>
+      <p>
+        Enjoy a guided tour of Fes including the Royal Palace,
+        the Jewish Quarter (Mellah), and the UNESCO-listed medina.
+        Visit Al Quaraouiyine University, one of the oldest universities in the world,
+        and observe traditional leather tanneries.
+      </p>
+    </div>
+
+    <div class="day">
+      <h3>Day 3 – Fes to Merzouga Desert</h3>
+      <p>
+        Travel through the Middle Atlas Mountains and Ziz Valley.
+        Arrive in Merzouga for a camel ride across the dunes
+        and an unforgettable overnight stay in a desert camp.
+      </p>
+    </div>
+
+    <div class="day">
+      <h3>Day 4 – Desert to Dades Valley</h3>
+      <p>
+        After sunrise in the Sahara, visit Todra Gorge and the Valley of Roses
+        before reaching Dades Valley for an overnight stay.
+      </p>
+    </div>
+
+    <div class="day">
+      <h3>Day 5 – Dades to Marrakech</h3>
+      <p>
+        Visit Ait Ben Haddou and cross the High Atlas Mountains.
+        Arrive in Marrakech where your unforgettable Moroccan journey concludes.
+      </p>
+    </div>
+
+    <img src="https://media.cntraveler.com/photos/65dfc055e781ac22c9a500e9/master/pass/GettyImages-1450546518.jpg"
+         alt="Morocco Travel Landscape">
+
+  </div>
 
 </section>
 
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-content">
+    <p>© 2026 Explore Africa. All Rights Reserved.</p>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
 <script>
   function toggleMenu() {
-    document.getElementById("nav-links").classList.toggle("active");
+    document.getElementById("navLinks").classList.toggle("active");
   }
 </script>
 
